@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Configure `node-stdlib-browser` for Vite projects",
   "main": "index.cjs",
+  "files": [
+    "index.cjs"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
