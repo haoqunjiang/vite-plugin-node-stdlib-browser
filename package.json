@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-node-stdlib-browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Configure `node-stdlib-browser` for Vite projects",
   "main": "index.cjs",
   "files": [
