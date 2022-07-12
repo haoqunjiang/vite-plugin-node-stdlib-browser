@@ -1,5 +1,6 @@
 const inject = require('@rollup/plugin-inject')
 const stdLibBrowser = require('node-stdlib-browser')
+const esbuildPlugin = require('node-stdlib-browser/helpers/esbuild/plugin')
 const {
   handleCircularDependancyWarning
 } = require('node-stdlib-browser/helpers/rollup/plugin')
@@ -18,7 +19,8 @@ const plugin = () => ({
           global: 'global',
           process: 'process',
           Buffer: 'Buffer'
-        }
+        },
+        plugins: [esbuildPlugin(stdLibBrowser)]
       }
     },
     plugins: [
