@@ -9,17 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Haoqun Jiang<haoqunjiang+npm@gmail.com>",
+  "author": "Haoqun Jiang <npm@haoqun.me>",
   "license": "MIT",
   "dependencies": {
-    "@rollup/plugin-inject": "^4.0.4"
+    "@rollup/plugin-inject": "^5.0.3"
   },
   "peerDependencies": {
     "node-stdlib-browser": "^1.2.0",
-    "vite": "^2.0.0 || ^3.0.0"
+    "vite": "^2.0.0 || ^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
-    "rollup": "^2.76.0",
+    "rollup": "^3.17.3",
     "standard": "^17.0.0"
   }
 }

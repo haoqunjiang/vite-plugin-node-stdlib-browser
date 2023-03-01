@@ -20,7 +20,20 @@ const plugin = () => ({
           process: 'process',
           Buffer: 'Buffer'
         },
-        plugins: [esbuildPlugin(stdLibBrowser)]
+        plugins: [
+          esbuildPlugin(stdLibBrowser),
+
+          // https://github.com/remorses/esbuild-plugins/issues/24#issuecomment-1369928859
+          {
+            name: 'fix-node-stdlib-browser-shim',
+            setup (build) {
+              build.onResolve(
+                { filter: /node-stdlib-browser\/helpers\/esbuild\/shim/ },
+                ({ path }) => ({ path })
+              )
+            }
+          }
+        ]
       }
     },
     plugins: [
