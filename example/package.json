@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "vite": "^4.1.0",
+    "vite-plugin-inspect": "^0.7.15",
     "vite-plugin-node-stdlib-browser": "workspace:*"
   },
   "dependencies": {
