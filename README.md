@@ -20,3 +20,13 @@ export default defineConfig({
   plugins: [nodePolyfills()]
 })
 ```
+
+## Notes
+
+* `node:` protocol imports are not supported yet.
+* The plugin only polyfills the dependencies, not the user code. This is intentional because you shouldn't rely on Node.js built-in libraries in the browser.
+
+## Alternatives
+
+* [`vite-plugin-node-polyfills`](https://github.com/voracious/vite-plugin-node-polyfills) is a similar plugin that is also based on `node-stdlib-browser`, but supports `node:` protocol imports.
+* Another alternative is to use a combination of esbuild plugins (for dev server) and Rollup plugins (for production build) to polyfill Node.js built-in libraries. An example configuration is available at https://gist.github.com/FbN/0e651105937c8000f10fefdf9ec9af3d.
